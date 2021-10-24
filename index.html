@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+  <title>Frontend Mentor | Article preview component</title>
+
+</head>
+<body>
+  <main>
+    <section class="imgSection">
+      <img class="mainImg" src="./images/drawers.jpg" alt="drawer image">
+    </section>
+
+    <section class="noPicSection">
+      <section class="textSection">
+        <p class="topParagraph">Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</p>
+
+        <p>Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.</p>
+      </section>
+
+      <section id="profile" class="profile">
+        <img class="avatar" src="./images/avatar-michelle.jpg" alt="avatar">
+
+        <div class="name">
+          <p class="pOne">Michelle Appleton</p>
+          <p>28 Jun 2020</p>
+        </div>
+        
+        <div class="icon">
+          <button class="toPop" onclick="hide()"></button>
+          <img id="mobShare" class="iconImg" onclick="hide()" src="./images/icon-share.svg" alt="">
+        </div>
+
+        <div id="pop" class="javaScript">
+          <div class="apps">
+            <p class="share">SHARE</p>
+            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=1551277091&extra_1=s%7Cc%7C294048096180%7Ce%7Cfacebook%27com%7C&placement=&creative=294048096180&keyword=facebook%27com&partner_id=googlesem&extra_2=campaignid%3D1551277091%26adgroupid%3D58439966349%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-296837408611%26loc_physical_ms%3D1007469%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMI2rODs-zi8wIV2RkGAB0VDA1NEAAYASAAEgK0xfD_BwE" target="blank"><img src="./images/icon-facebook.svg" alt=""></a>
+            <a href="https://twitter.com/?lang=en" target="blank"><img src="./images/icon-twitter.svg" alt=""></a>
+            <a href="https://www.pinterest.com/" target="blank"><img src="./images/icon-pinterest.svg" alt=""></a>
+          </div>
+          <div class="whiteShareDiv">
+            <button class="toHide" onclick="hide()"></button>
+            <img id="deskShare" class="whiteShare" onclick="hide()" src="./images/icon-share.svg" alt="">
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+    
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Xabura" target="_blank">Xabu</a>.
+  </div>
+</body>
+</html>

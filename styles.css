@@ -1,0 +1,261 @@
+html{
+    display: flex;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+}
+
+body{
+    width: min(85%, 50rem);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+@media (min-width: 860px) {
+    html{
+        height: 100%;
+    }
+    body{
+        align-self: center;
+        height: min(70%, 20rem);
+        
+    }
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 30px -20px;
+}
+@media (min-width: 860px) {
+    main{
+        display: flex;
+        align-items: center;
+        height: min(20rem, 100%);
+    }
+}
+
+
+.imgSection{
+    width: 100%;
+    aspect-ratio: 1 / .66;
+    overflow: hidden;
+}
+@media (min-width: 860px) {
+    .imgSection{
+        width: unset;
+        height: 100%;
+        aspect-ratio: 1.75 / 1;
+    }
+}
+
+.mainImg{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+@media (min-width: 860px) {
+    .mainImg{
+        width: unset;
+        height: 100%;
+        border-bottom-left-radius: 10px;
+    }    
+}
+
+
+.noPicSection{
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+.noPicSection > * {
+    padding-inline: 2rem;
+}
+@media (min-width: 860px) {
+    .noPicSection{
+        padding: 0rem;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+.textSection{
+    color: hsl(214, 17%, 51%);
+    line-height: 1.6;
+    font-size: clamp(.85rem, 2vw, .9rem);
+    margin-bottom: 1.5rem;
+}
+
+.topParagraph{
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+}
+@media (min-width: 860px) {
+    .topParagraph{
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+.profile{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 4rem;
+    font-size: clamp(.85rem, 2vw, 1rem);
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.avatar{
+    height: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.name{
+    flex-grow: 1;
+}
+.name > * {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: hsl(214, 17%, 51%);
+}
+.pOne{
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+
+.javaScript{
+    position: absolute;
+    background-color: hsl(217, 19%, 35%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+.apps{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: .4;
+}
+.share{
+    color: hsl(210, 46%, 95%);
+    font-weight: 100;
+    letter-spacing: 4 px;
+}
+
+@media (min-width: 860px) {
+    .javaScript{
+        width: 14rem;
+        height: 3.5rem;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        top: -4.5rem;
+        left: 19.25rem;
+    }
+    .javaScript::before{
+        position: absolute;
+        content: '';
+        background-color: hsl(217, 19%, 35%); 
+        width: 30px;
+        height: 30px;
+        bottom: -8px;
+        transform: rotate(45deg);
+    }
+    .javaScript > * {
+        margin-inline: 1rem;
+    }
+    .apps{
+        flex-grow: 1;
+        z-index: 1;
+    }
+}
+@media (min-width: 860px) and (max-width: 940px) {
+    .javaScript{
+        left: 17.5rem;
+    }
+}
+
+
+
+.whiteShareDiv{
+    background-color: hsl(217, 19%, 45%);
+    height: 50%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.whiteShare{
+    filter: brightness(0) invert(1);
+    height: 40%;
+    aspect-ratio: 1;
+}
+@media (min-width: 860px) {
+    .whiteShareDiv{
+        display: none;
+    }
+}
+
+.icon{
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    height: 60%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.iconImg{
+    height: 50%;
+    aspect-ratio: 1;
+}
+
+.toHide,
+.toPop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+a > img {
+    position: relative;
+    transition: 1ms;
+}
+a > img:hover{
+    top: -.2rem;
+}
+
+
+
+.attribution{
+    font-size: clamp(.85rem, 2vw, 1rem);
+    color: hsl(217, 19%, 35%);
+    text-align: center;
+    margin-top: 2rem;
+}
+.attribution > a {
+    text-decoration: none;
+}
